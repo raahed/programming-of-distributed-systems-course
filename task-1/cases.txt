@@ -1,0 +1,11 @@
+marvin wsl
+andreas surface
+jeweils eduroam
+jeweils daheim
+jeweils hotspot
+andreas vpn (anderes land)
+marvin vpn arbeit
+
+Testnachrichten
+Lorem ipsum 5, 100, 200
+Message Counter 5, 100, 1000
