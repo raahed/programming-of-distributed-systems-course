@@ -30,7 +30,7 @@ udp_client = sk.socket(family=sk.AF_INET, type=sk.SOCK_DGRAM)
 
 for i in range(loop_counter):
 
-    filestream.write(f'{filename}, {i},')
+    filestream.write(f'{test_name}, {i},')
 
     try:
         time_start = dt.now()
