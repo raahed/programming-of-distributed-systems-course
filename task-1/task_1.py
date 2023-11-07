@@ -7,16 +7,16 @@ test_name = sys.argv[1]
 send_content = sys.argv[2]
 loop_counter = int(sys.argv[3])
 
-serverAddressPort = ("130.243.124.183", 12345)
+serverAddressPort = ('130.243.124.183', 12345)
 buffer_size = 65536
 
 bytesToSend = str.encode(send_content)
 
 filename = f'{test_name}-{dt.now().strftime("%H_%M_%S_%f")}.csv'
-filestream = open(filename, "a")
+filestream = open(filename, 'a')
 
 # csv headers
-filestream.write('test_name, loop counter, send time, send answer, message, trace hops\n')
+filestream.write('test group,test name,loop counter,send time,answer time,message,trace hops\n')
 
 # Tracert
 sp.run(f'traceroute {serverAddressPort[0]} > {filename}.trace', shell=True, check=True)
@@ -25,38 +25,41 @@ sp.run(f'traceroute {serverAddressPort[0]} > {filename}.trace', shell=True, chec
 trace_prog = sp.Popen(f'cat {filename}.trace | tail -n 1 | awk \'END{{ print $1 }}\'', shell=True, stdout=sp.PIPE)
 hops = int(trace_prog.stdout.read().decode())
 
-# Socket Connection aufbauen
-udp_client = sk.socket(family=sk.AF_INET, type=sk.SOCK_DGRAM)
+udp_client = None
 
 for i in range(loop_counter):
 
-    filestream.write(f'{test_name}, {i},')
+    # Resets
+    send_time = 0
+    answer_time = 0
+    message = 0
 
     try:
+        # Socket Connection
+        udp_client = sk.socket(family=sk.AF_INET, type=sk.SOCK_DGRAM)
+        udp_client.settimeout(5)
+
         time_start = dt.now()
 
         # Send Message
         udp_client.sendto(bytesToSend, serverAddressPort)
 
-        time_send = dt.now()
+        send_time = dt.now() - time_start
 
-        filestream.write(f'{time_send - time_start},')
         time_start = dt.now()
 
-        #Receive From
+        # Receive From
         msgFromServer = udp_client.recvfrom(buffer_size)
-        msg = msgFromServer[0].decode()
+        message = len(msgFromServer[0].decode())
 
-        time_answer = dt.now()
-
-        filestream.write(f'{time_answer - time_start},{len(msg)}, {hops}')
+        answer_time = dt.now() - time_start
 
     except Exception as e:
-        print(f"Receive failed! {e}")
-        filestream.write(f'0,0,{e},0')
+        print(f'\tReceive failed: {e}')
+        message = e
 
     finally:
-        filestream.write('\n')
+        filestream.write(f'{test_name},{test_name}-{loop_counter},{i},{send_time},{answer_time},{message},{hops}\n')
+        udp_client.close()
 
-udp_client.close()
 filestream.close()
