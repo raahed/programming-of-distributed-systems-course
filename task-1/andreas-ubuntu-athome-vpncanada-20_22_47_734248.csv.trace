@@ -1,0 +1,2 @@
+traceroute to 130.243.124.183 (130.243.124.183), 30 hops max, 60 byte packets
+ 1  _gateway (172.20.10.1)  3.919 ms  3.895 ms  3.889 ms
