@@ -1,0 +1,6 @@
+test group,test name,loop counter,send time,answer time,message,trace hops
+marvin-wsl-pine,marvin-wsl-pine-5,0,0:00:00.000032,0:00:00.011483,912,12
+marvin-wsl-pine,marvin-wsl-pine-5,1,0:00:00.000024,0:00:00.011969,912,12
+marvin-wsl-pine,marvin-wsl-pine-5,2,0:00:00.000033,0:00:00.012113,912,12
+marvin-wsl-pine,marvin-wsl-pine-5,3,0:00:00.000039,0:00:00.011897,912,12
+marvin-wsl-pine,marvin-wsl-pine-5,4,0:00:00.000048,0:00:00.011971,912,12

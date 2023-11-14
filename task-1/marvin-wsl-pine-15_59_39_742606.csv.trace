@@ -1,0 +1,13 @@
+traceroute to 130.243.124.183 (130.243.124.183), 30 hops max, 60 byte packets
+ 1  172.31.64.1 (172.31.64.1)  0.288 ms  0.262 ms  0.256 ms
+ 2  192.168.0.1 (192.168.0.1)  2.102 ms *  2.021 ms
+ 3  c213-200-143-2.bredband.tele2.se (213.200.143.2)  7.344 ms  8.174 ms  7.905 ms
+ 4  213.200.168.17 (213.200.168.17)  8.455 ms *  8.161 ms
+ 5  * inx-peer-1.ae1-unit0.tele2.net (91.129.14.128)  8.139 ms *
+ 6  netnod-ix-ge-a-sth-1500.sunet.se (194.68.123.19)  8.202 ms  8.496 ms  8.469 ms
+ 7  stockholm-sthb-r1.sunet.se (130.242.5.58)  8.430 ms  9.500 ms  9.639 ms
+ 8  oru2.sunet.se (130.242.6.119)  12.301 ms  11.643 ms vasteras-fsn2-r1.sunet.se (130.242.4.37)  10.003 ms
+ 9  oru2.sunet.se (130.242.6.119)  11.815 ms  12.265 ms  11.797 ms
+10  ore-lh-edge1-sunet2.oru.se (130.243.96.17)  12.209 ms  12.201 ms Modem12.oru.se (130.243.96.212)  12.292 ms
+11  Modem12.oru.se (130.243.96.212)  12.693 ms Modem27.oru.se (130.243.96.227)  13.583 ms Modem12.oru.se (130.243.96.212)  11.749 ms
+12  PC124-183.oru.se (130.243.124.183)  11.702 ms Modem28.oru.se (130.243.96.228)  12.155 ms PC124-183.oru.se (130.243.124.183)  12.278 ms

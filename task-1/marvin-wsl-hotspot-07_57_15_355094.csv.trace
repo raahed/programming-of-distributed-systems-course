@@ -1,0 +1,16 @@
+traceroute to 130.243.124.183 (130.243.124.183), 30 hops max, 60 byte packets
+ 1  172.31.64.1 (172.31.64.1)  0.344 ms  0.539 ms  0.320 ms
+ 2  192.168.10.30 (192.168.10.30)  8.546 ms  8.542 ms  8.538 ms
+ 3  192.168.0.1 (192.168.0.1)  11.082 ms  11.081 ms  11.077 ms
+ 4  c213-200-143-2.bredband.tele2.se (213.200.143.2)  16.007 ms  17.746 ms  16.002 ms
+ 5  213.200.168.17 (213.200.168.17)  17.887 ms stb-core-1-et151.net.comhem.se (213.200.168.19)  17.884 ms 213.200.168.17 (213.200.168.17)  17.881 ms
+ 6  stb-peer-1.ae1-unit0.tele2.net (91.129.14.132)  28.866 ms  17.687 ms inx-peer-1.ae2-unit0.tele2.net (91.129.14.130)  24.705 ms
+ 7  sthb-r2.sunet.se (130.242.3.122)  15.373 ms  15.359 ms netnod-ix-ge-a-sth-1500.sunet.se (194.68.123.19)  19.045 ms
+ 8  vasteras-fsn2-r1.sunet.se (130.242.4.34)  19.042 ms  15.344 ms stockholm-sthb-r1.sunet.se (130.242.5.58)  15.341 ms
+ 9  oru2.sunet.se (130.242.6.119)  19.088 ms vasteras-fsn2-r1.sunet.se (130.242.4.37)  15.257 ms oru2.sunet.se (130.242.6.119)  19.082 ms
+10  ore-lh-edge1-sunet2.oru.se (130.243.96.17)  17.657 ms  19.346 ms  17.650 ms
+11  ore-lh-edge1-sunet2.oru.se (130.243.96.17)  17.647 ms  19.411 ms  19.399 ms
+12  Modem12.oru.se (130.243.96.212)  20.575 ms Modem28.oru.se (130.243.96.228)  23.064 ms  23.047 ms
+13  Modem27.oru.se (130.243.96.227)  23.039 ms Modem28.oru.se (130.243.96.228)  25.249 ms *
+14  * * *
+15  * PC124-183.oru.se (130.243.124.183)  20.827 ms *

@@ -1,0 +1,6 @@
+test group,test name,loop counter,send time,answer time,message,trace hops
+marvin-wsl-pine-vpn,marvin-wsl-pine-vpn-5,0,0:00:00.000040,0:00:00.018283,27,30
+marvin-wsl-pine-vpn,marvin-wsl-pine-vpn-5,1,0:00:00.000034,0:00:00.014938,27,30
+marvin-wsl-pine-vpn,marvin-wsl-pine-vpn-5,2,0:00:00.000019,0:00:00.014010,27,30
+marvin-wsl-pine-vpn,marvin-wsl-pine-vpn-5,3,0:00:00.000017,0:00:00.015374,27,30
+marvin-wsl-pine-vpn,marvin-wsl-pine-vpn-5,4,0:00:00.000030,0:00:00.016054,27,30

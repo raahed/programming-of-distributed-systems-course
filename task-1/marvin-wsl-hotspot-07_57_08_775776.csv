@@ -1,0 +1,6 @@
+test group,test name,loop counter,send time,answer time,message,trace hops
+marvin-wsl-hotspot,marvin-wsl-hotspot-5,0,0:00:00.000029,0:00:00.022455,912,14
+marvin-wsl-hotspot,marvin-wsl-hotspot-5,1,0:00:00.000027,0:00:00.019579,912,14
+marvin-wsl-hotspot,marvin-wsl-hotspot-5,2,0:00:00.000037,0:00:00.023198,912,14
+marvin-wsl-hotspot,marvin-wsl-hotspot-5,3,0:00:00.000042,0:00:00.028859,912,14
+marvin-wsl-hotspot,marvin-wsl-hotspot-5,4,0:00:00.000022,0:00:00.021491,912,14

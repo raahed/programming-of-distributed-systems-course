@@ -1,0 +1,6 @@
+test group,test name,loop counter,send time,answer time,message,trace hops
+marvin-wsl-eduroam,marvin-wsl-eduroam-5,0,0:00:00.000052,0:00:00.003121,609,4
+marvin-wsl-eduroam,marvin-wsl-eduroam-5,1,0:00:00.000044,0:00:00.003164,609,4
+marvin-wsl-eduroam,marvin-wsl-eduroam-5,2,0:00:00.000019,0:00:00.003544,609,4
+marvin-wsl-eduroam,marvin-wsl-eduroam-5,3,0:00:00.000009,0:00:00.003491,609,4
+marvin-wsl-eduroam,marvin-wsl-eduroam-5,4,0:00:00.000012,0:00:00.005205,609,4
