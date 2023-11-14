@@ -1,0 +1,6 @@
+test group,test name,loop counter,send time,answer time,message,trace hops
+andreas-ubuntu-hotspot,andreas-ubuntu-hotspot-5,0,0:00:00.000083,0:00:00.145822,609,30
+andreas-ubuntu-hotspot,andreas-ubuntu-hotspot-5,1,0:00:00.000068,0:00:00.204524,609,30
+andreas-ubuntu-hotspot,andreas-ubuntu-hotspot-5,2,0:00:00.000063,0:00:00.204478,609,30
+andreas-ubuntu-hotspot,andreas-ubuntu-hotspot-5,3,0:00:00.000069,0,timed out,30
+andreas-ubuntu-hotspot,andreas-ubuntu-hotspot-5,4,0:00:00.000108,0:00:00.217834,609,30

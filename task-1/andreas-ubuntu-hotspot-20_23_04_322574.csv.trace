@@ -1,0 +1,31 @@
+traceroute to 130.243.124.183 (130.243.124.183), 30 hops max, 60 byte packets
+ 1  _gateway (172.20.10.1)  6.377 ms  6.345 ms  6.338 ms
+ 2  * * *
+ 3  * * *
+ 4  * * *
+ 5  * * *
+ 6  * * *
+ 7  * * *
+ 8  ipservice-092-214-120-018.092.214.pools.vodafone-ip.de (92.214.120.18)  175.245 ms  175.226 ms  175.208 ms
+ 9  nordunet.sara1.nl-ix.net (193.239.116.53)  175.107 ms  175.091 ms  175.074 ms
+10  nordunet.sara1.nl-ix.net (193.239.116.53)  175.057 ms  175.040 ms  175.023 ms
+11  dk-esbj.nordu.net (109.105.97.74)  175.066 ms  175.049 ms  164.827 ms
+12  dk-bal2.nordu.net (109.105.98.24)  164.702 ms  164.682 ms  85.083 ms
+13  lnd88-r1.sunet.se (109.105.102.3)  85.024 ms  85.006 ms  84.988 ms
+14  vaxjo-vxj-r1.sunet.se (130.242.4.63)  84.967 ms  117.545 ms  117.528 ms
+15  jonkoping-jkg-r1.sunet.se (130.242.4.54)  117.510 ms  117.493 ms  117.476 ms
+16  skovde-ske109-r1.sunet.se (130.242.4.43)  118.923 ms  118.906 ms  118.890 ms
+17  orebro-lba-r1.sunet.se (130.242.4.32)  118.867 ms  85.490 ms  83.595 ms
+18  oru1.sunet.se (130.242.6.117)  85.426 ms  85.408 ms  85.392 ms
+19  ore-th-edge2-sunet1.oru.se (130.243.96.25)  105.025 ms  104.965 ms  104.946 ms
+20  Modem12.oru.se (130.243.96.212)  93.874 ms  117.992 ms  116.725 ms
+21  Modem27.oru.se (130.243.96.227)  116.690 ms Modem28.oru.se (130.243.96.228)  117.878 ms Modem27.oru.se (130.243.96.227)  116.654 ms
+22  * * *
+23  * * *
+24  * * *
+25  * * *
+26  * * *
+27  * * *
+28  * * *
+29  * * *
+30  * * *

@@ -1,0 +1,6 @@
+test group,test name,loop counter,send time,answer time,message,trace hops
+andreas-ubuntu-athome,andreas-ubuntu-athome-5,0,0:00:00.000069,0:00:00.010934,912,11
+andreas-ubuntu-athome,andreas-ubuntu-athome-5,1,0:00:00.000053,0:00:00.010933,912,11
+andreas-ubuntu-athome,andreas-ubuntu-athome-5,2,0:00:00.000055,0:00:00.011444,912,11
+andreas-ubuntu-athome,andreas-ubuntu-athome-5,3,0:00:00.000058,0:00:00.011693,912,11
+andreas-ubuntu-athome,andreas-ubuntu-athome-5,4,0:00:00.000058,0:00:00.011460,912,11

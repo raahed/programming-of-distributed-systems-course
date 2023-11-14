@@ -1,0 +1,6 @@
+test group,test name,loop counter,send time,answer time,message,trace hops
+andreas-ubuntu-hotspot-vpncanada,andreas-ubuntu-hotspot-vpncanada-5,0,0:00:00.000086,0,timed out,30
+andreas-ubuntu-hotspot-vpncanada,andreas-ubuntu-hotspot-vpncanada-5,1,0:00:00.000071,0:00:01.376192,27,30
+andreas-ubuntu-hotspot-vpncanada,andreas-ubuntu-hotspot-vpncanada-5,2,0:00:00.000055,0:00:03.231091,27,30
+andreas-ubuntu-hotspot-vpncanada,andreas-ubuntu-hotspot-vpncanada-5,3,0:00:00.000057,0,timed out,30
+andreas-ubuntu-hotspot-vpncanada,andreas-ubuntu-hotspot-vpncanada-5,4,0:00:00.000082,0,timed out,30
