@@ -1,0 +1,6 @@
+test group,test name,loop counter,send time,answer time,message,trace hops
+andreas-ubuntu-eduroam,andreas-ubuntu-eduroam-5,0,0:00:00.000044,0:00:00.003135,912,3
+andreas-ubuntu-eduroam,andreas-ubuntu-eduroam-5,1,0:00:00.000040,0:00:00.002724,912,3
+andreas-ubuntu-eduroam,andreas-ubuntu-eduroam-5,2,0:00:00.000043,0:00:00.003000,912,3
+andreas-ubuntu-eduroam,andreas-ubuntu-eduroam-5,3,0:00:00.000048,0:00:00.002828,912,3
+andreas-ubuntu-eduroam,andreas-ubuntu-eduroam-5,4,0:00:00.000036,0:00:00.002527,912,3

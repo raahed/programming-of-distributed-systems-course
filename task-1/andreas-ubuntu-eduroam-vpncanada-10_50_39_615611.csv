@@ -1,0 +1,6 @@
+test group,test name,loop counter,send time,answer time,message,trace hops
+andreas-ubuntu-eduroam-vpncanada,andreas-ubuntu-eduroam-vpncanada-5,0,0:00:00.000085,0:00:00.236114,27,30
+andreas-ubuntu-eduroam-vpncanada,andreas-ubuntu-eduroam-vpncanada-5,1,0:00:00.000052,0:00:00.246765,27,30
+andreas-ubuntu-eduroam-vpncanada,andreas-ubuntu-eduroam-vpncanada-5,2,0:00:00.000021,0:00:00.236843,27,30
+andreas-ubuntu-eduroam-vpncanada,andreas-ubuntu-eduroam-vpncanada-5,3,0:00:00.000023,0:00:00.237522,27,30
+andreas-ubuntu-eduroam-vpncanada,andreas-ubuntu-eduroam-vpncanada-5,4,0:00:00.000022,0:00:00.234568,27,30
