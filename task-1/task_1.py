@@ -1,4 +1,4 @@
-import sys
+import sys  
 import socket as sk
 import subprocess as sp
 from datetime import datetime as dt
@@ -7,7 +7,7 @@ test_name = sys.argv[1]
 send_content = sys.argv[2]
 loop_counter = int(sys.argv[3])
 
-serverAddressPort = ('130.243.124.183', 12345)
+serverAddressPort = ('130.243.124.183', 12345) 
 buffer_size = 65536
 
 bytesToSend = str.encode(send_content)
@@ -29,7 +29,7 @@ udp_client = None
 
 for i in range(loop_counter):
 
-    # Resets
+    # Resets 
     send_time = 0
     answer_time = 0
     message = 0
