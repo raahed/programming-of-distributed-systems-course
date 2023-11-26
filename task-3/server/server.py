@@ -3,7 +3,7 @@ from jsonrpcserver import method, Success, serve
 import threading
 
 # Define the file path
-file_path = "./server_file.txt"
+file_path = "server_file.txt"
 
 # Lock for synchronization
 
@@ -28,7 +28,6 @@ def write(data):
         return {"error": str(e)}
 
 
-
 if __name__ == "__main__":
     # Check if the server file exists, create it if not
     if not os.path.exists(file_path):
@@ -36,5 +35,4 @@ if __name__ == "__main__":
             file.write("Initial content")
 
     # Start the JSON-RPC server
-    serve(port=8080)
-    print("JSON-RPC Server listening on http://localhost:8080")
+    serve(port=4000)

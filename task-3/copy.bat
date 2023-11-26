@@ -1,0 +1,1 @@
+scp -r server* oru-pds@raah.me:/home/oru-pds

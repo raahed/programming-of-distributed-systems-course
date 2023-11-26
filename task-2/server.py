@@ -9,6 +9,5 @@ def list_files(folder_path):
     except Exception as e:
         return {"error": str(e)}
 
-if __name__ == "__main__":
-    serve(port=8080)
-    print("JSON-RPC Server lauscht auf http://localhost:8080")
+
+serve(port=8080)
