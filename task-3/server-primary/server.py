@@ -4,8 +4,8 @@ import threading
 import requests
 import json
 
-url_test_rep1 = "http://localhost:4001"
-url_test_rep2 = "http://localhost:4002"
+url_test_rep1 = "https://oru-pds-serv-r1.raah.me/"
+url_test_rep2 = "https://oru-pds-serv-r2.raah.me/"
 
 
 # client side
