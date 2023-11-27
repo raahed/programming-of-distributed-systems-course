@@ -3,7 +3,7 @@ from jsonrpcserver import method, Success, serve
 import threading
 
 # Define the file path
-file_path = "server_file.txt"
+file_path = "server_file-rep2.txt"
 
 # Lock for synchronization
 
@@ -35,4 +35,4 @@ if __name__ == "__main__":
             file.write("Initial content")
 
     # Start the JSON-RPC server
-    serve(port=4000)
+    serve(port=4002)

@@ -1,7 +1,8 @@
 import requests
 import json
 
-url = "http://localhost:8080"
+url_test = "http://localhost:4000"
+
 
 def json_rpc_request(method, params):
     payload = {
@@ -10,7 +11,7 @@ def json_rpc_request(method, params):
         "params": params,
         "id": 1,
     }
-    response = requests.post(url, json=payload).json()
+    response = requests.post(url_test, json=payload).json()
     
     # Check for errors in the response
     if "error" in response:
@@ -24,10 +25,10 @@ def read():
     if result is not None:
         print("Read result:", result)
 
-def write(data):
+def writing(data):
     result = json_rpc_request("write", {"data": data})
     if result is not None:
         print("Write result:", result)
 
 # Example calls
-write("Das schreiben geht!")  # Perform a write operation
+writing("Das geht jetzt aber wirklich")  # Perform a write operation
