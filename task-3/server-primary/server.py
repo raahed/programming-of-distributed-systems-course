@@ -4,8 +4,11 @@ import threading
 import requests
 import json
 
-url_test_rep1 = "https://oru-pds-serv-r1.raah.me/"
-url_test_rep2 = "https://oru-pds-serv-r2.raah.me/"
+#url_test_rep1 = "https://oru-pds-serv-r1.raah.me/"
+#url_test_rep2 = "https://oru-pds-serv-r2.raah.me/"
+
+url_test_rep1 = "http://localhost:4001"
+url_test_rep2 = "http://localhost:4002"
 
 
 # client side
@@ -48,8 +51,7 @@ file_path = "server_file.txt"
 
 # Lock for synchronization
 
-temp = "HAHA"; 
-
+@method
 def read():
     try:
         with open(file_path, 'r') as file:
@@ -64,8 +66,14 @@ def write(data):
             # Write to the main server file
         with open(file_path, 'w') as file:
             file.write(data)
-            write_rep(data, url_test_rep1)
-            write_rep(data, url_test_rep2)
+            try:
+                write_rep(data, url_test_rep1)
+            except Exception as e1:
+                print(str(e1))
+            try:
+                write_rep(data, url_test_rep2)
+            except Exception as e2:
+                print(str(e2))        
 
         return Success("Write successful")
     except Exception as e:

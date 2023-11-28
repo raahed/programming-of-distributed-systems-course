@@ -4,10 +4,13 @@ import threading
 import requests
 import json
 
-url_primary = "https://oru-pds-serv-prim.raah.me"
-url_rep1 = "https://oru-pds-serv-r1.raah.me/"
-url_rep2 = "https://oru-pds-serv-r2.raah.me/"
+#url_primary = "https://oru-pds-serv-prim.raah.me"
+#url_rep1 = "https://oru-pds-serv-r1.raah.me/"
+#url_rep2 = "https://oru-pds-serv-r2.raah.me/"
 
+url_primary = "http://localhost:4000"
+url_rep1 = "http://localhost:4001"
+url_rep2 = "http://localhost:4002"
 # client side
 
 @method
@@ -31,7 +34,7 @@ def json_rpc_request(method, params, url):
 def read_to_server(url):
     result = json_rpc_request("read", {}, url)
     if result is not None:
-        print("Read result:", result)
+        return result
 
 @method
 def write_to_server(data, url):
@@ -42,59 +45,42 @@ def write_to_server(data, url):
 
 # server side
 
-# Define the file path
-file_path = "server_file.txt"
-
-# Lock for synchronization
-
-temp = "HAHA"; 
-
+@method
 def read():
     try:
-        with open(file_path, 'r') as file:
+        content = read_to_server(url_primary)
+        return Success(content)
+    except Exception as e_primary:
+        print(str(e_primary))
+        try:
+            content = read_to_server(url_rep1)
+            return Success(content)
+        except Exception as e_rep1:
+            print(str(e_rep1))
             try:
-                try:
-                    read_to_server(url_primary)
-                except Exception as e:
-                    return {"Main server error:": str(e)}
-                try:
-                    read_to_server(url_rep1)
-                except Exception as e:
-                    return {"Rep1 server error:": str(e)}
-                try:
-                    read_to_server(url_rep2)
-                except Exception as e:
-                    return {"Rep2 server error:": str(e)}
-            except Exception as e:
-                return {"All server error:" : str(e)}
-            
-            return Success("Read successful")
-    except Exception as e:
-        return {"error": str(e)}
+                content = read_to_server(url_rep2)
+                return Success(content)
+            except Exception as e_rep2:
+                return {"All servers failed:": str(e_rep2)}
+
 
 @method
 def write(data):
     try:
+        write_to_server(data, url_primary)
+    except Exception as e_primary:
         try:
-            try:
-                write_to_server(data, url_primary)
-            except Exception as e:
-                return {"Main server error:": str(e)}
-            try:
-                write_to_server(data, url_rep1)
-            except Exception as e:
-                return {"Rep1 server error:": str(e)}
+            write_to_server(data, url_rep1)
             try:
                 write_to_server(data, url_rep2)
-            except Exception as e:
-                return {"Rep2 server error:": str(e)}
-            
-            return Success("Write successful")
-        except Exception as e:
-            return {"All server error:" : str(e)}
-    except Exception as e:
-        return {"error": str(e)}
-
+            except Exception as e_rep2:
+                return {"All servers failed:" : str(e_rep2)}
+        except Exception as e_rep1:
+            try:
+                write_to_server(data, url_rep2)
+            except Exception as e_rep2:
+                return {"All servers failed:": str(e_primary)}
+    return Success("Write sucessful")
 
 if __name__ == "__main__":
     # Start the JSON-RPC server

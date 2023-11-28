@@ -1,7 +1,7 @@
 import requests
 import json
 
-url_test = "http://localhost:4000"
+url_test = "http://localhost:3999"
 
 
 def json_rpc_request(method, params):
@@ -31,4 +31,4 @@ def writing(data):
         print("Write result:", result)
 
 # Example calls
-writing("Das geht jetzt aber wirklich")  # Perform a write operation
+read()  # Perform a write operation

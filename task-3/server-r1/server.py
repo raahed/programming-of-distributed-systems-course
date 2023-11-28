@@ -3,7 +3,7 @@ from jsonrpcserver import method, Success, serve
 import threading
 
 # Define the file path
-file_path = "../server/server_file-rep1.txt"
+file_path = "server_file-rep1.txt"
 
 # Lock for synchronization
 
