@@ -4,11 +4,11 @@ import threading
 import requests
 import json
 
-#url_test_rep1 = "https://oru-pds-serv-r1.raah.me/"
-#url_test_rep2 = "https://oru-pds-serv-r2.raah.me/"
+url_test_rep1 = "https://oru-pds-serv-r1.raah.me/"
+url_test_rep2 = "https://oru-pds-serv-r2.raah.me/"
 
-url_test_rep1 = "http://localhost:4001"
-url_test_rep2 = "http://localhost:4002"
+#url_test_rep1 = "http://localhost:4001"
+#url_test_rep2 = "http://localhost:4002"
 
 
 # client side
@@ -65,7 +65,7 @@ def write(data):
     try:
             # Write to the main server file
         with open(file_path, 'w') as file:
-            file.write(data)
+            file.write(f'[server-prim] {data}')
             try:
                 write_rep(data, url_test_rep1)
             except Exception as e1:

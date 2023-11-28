@@ -21,7 +21,7 @@ def write(data):
     try:
             # Write to the main server file
         with open(file_path, 'w') as file:
-            file.write(data)
+            file.write(f'[server-r1] {data}')
             
         return Success("Write successful")
     except Exception as e:

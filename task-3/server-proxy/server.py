@@ -4,13 +4,13 @@ import threading
 import requests
 import json
 
-#url_primary = "https://oru-pds-serv-prim.raah.me"
-#url_rep1 = "https://oru-pds-serv-r1.raah.me/"
-#url_rep2 = "https://oru-pds-serv-r2.raah.me/"
+url_primary = "https://oru-pds-serv-prim.raah.me"
+url_rep1 = "https://oru-pds-serv-r1.raah.me/"
+url_rep2 = "https://oru-pds-serv-r2.raah.me/"
 
-url_primary = "http://localhost:4000"
-url_rep1 = "http://localhost:4001"
-url_rep2 = "http://localhost:4002"
+#url_primary = "http://localhost:4000"
+#url_rep1 = "http://localhost:4001"
+#url_rep2 = "http://localhost:4002"
 # client side
 
 @method

@@ -1,7 +1,7 @@
 import requests
 import json
 
-url_test = "http://localhost:3999"
+url_test = ("https://oru-pds-serv.raah.me")
 
 
 def json_rpc_request(method, params):
