@@ -1,6 +1,5 @@
 import jsonrpcserver as rpc
 from utils import participants
-from utils import json_rpc_request, participants
 
 table = {
     0: False, # match
@@ -9,21 +8,18 @@ table = {
 }
 
 @rpc.method
-def putIngredient(i: int) -> int:
+def putIngredient(i: int) -> rpc.Success:
     table[i] = True
-    return rpc.Success(i)
+    return rpc.Success()
 
 @rpc.method
-def takeIngredient(i: int) -> int:
+def takeIngredient(i: int) -> rpc.Success:
     table[i] = False
-    return rpc.Success(i)
+    return rpc.Success()
 
 @rpc.method
-def checkIngredient(i: int) -> bool:
+def checkIngredient(i: int) -> rpc.Success:
     return rpc.Success(table[i])
 
 if __name__ == "__main__":
-    json_rpc_request("startCheckIngredientLoop", {"i": 0}, participants["smoker_tabaco"])
-    json_rpc_request("startCheckIngredientLoop", {"i": 0}, participants["smoker_match"])
-    json_rpc_request("startCheckIngredientLoop", {"i": 0}, participants["smoker_paper"])
     rpc.serve(port=participants["table"])

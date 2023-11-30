@@ -2,20 +2,19 @@ from utils import json_rpc_request, participants
 import jsonrpcserver as rpc
 import random
 
-def generateTwoIngredients():
-    return random.sample([0, 1, 2], 2)
-
-@rpc.method
 def putIngredient(i):
-    result = json_rpc_request("putIngredient", {"i": i}, participants["table"])
-    if result is not None:
-        print(f"Ingredient {i}: {result}")
+    print(f"[Dealer] Putting {i} on the table!")
+    json_rpc_request("putIngredient", {"i": i}, participants["table"])
 
 @rpc.method
 def serveTable():
-    ingredients = generateTwoIngredients()
+    ingredients = random.sample([0, 1, 2], 2)
+
+    # Serving two ingredients
     putIngredient(ingredients[0])
     putIngredient(ingredients[1])
+    
+    return rpc.Success()
 
 if __name__ == "__main__":
     # Serving the table for the first time

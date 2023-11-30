@@ -9,15 +9,17 @@ participants = {
     "smoker_tabaco": 4004,
 } 
 
-wait_timer = 1000
+wait_timer = 1
 
-def json_rpc_request(method, params, participant):
+def json_rpc_request(method, params = None, participant: int = 0):
     payload = {
         "jsonrpc": "2.0",
         "method": method,
-        "params": params,
-        "id": random.randint(0, 100000),
+        "id": random.randint(0, 100000)
     }
+
+    if params:
+        payload["params"] = params
 
     response = requests.post(f"http://localhost:{participant}", json=payload).json()
     
