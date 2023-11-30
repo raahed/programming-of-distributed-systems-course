@@ -1,0 +1,31 @@
+@startuml
+actor "Dealer"
+actor "Smoker"
+entity "Table"
+
+== Initialization ==
+Dealer -> Table : Put
+activate Table
+return Response
+
+== Repetition ==
+loop
+    Smoker -> Table : Checking
+    activate Table
+    return Response
+
+    alt ingrediens there
+        Smoker -> Table : Taking
+        activate Table
+        return Response
+
+        Smoker --> Smoker : Smoke
+        Smoker -> Dealer : Servce Table
+        activate Dealer
+        Dealer -> Table : Put
+        activate Table
+        return Response
+        return Response
+    end
+end
+@enduml
