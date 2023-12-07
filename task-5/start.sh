@@ -1,0 +1,1 @@
+python3 philosipher1.py & python3 philosipher2.py & python3 philosipher3.py & python3 philosipher4.py & python3 philosipher5.py  && fg
